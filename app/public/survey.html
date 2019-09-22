@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Find your nemesis today!</title>
+</head>
+
+<body>
+
+    <form class="container">
+        <div class="form-group">
+            <label for="userName">User Name</label>
+            <input type="text" class="form-control" id="userName" aria-describedby="textHelp" placeholder="Enter text">
+            <small id="textHelp" class="form-text text-muted">Can't be blank</small>
+        </div>
+        <label class="form-row" for="rollRadio">I am a:</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rollRadio" id="rollRadio1" value="hero" checked>
+            <label class="form-check-label" for="rollRadio1">
+                Hero
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rollRadio" id="rollRadio2" value="villian">
+            <label class="form-check-label" for="rollRadio2">
+                Villian
+            </label>
+        </div>
+        <label class="form-row" for="seekingRadio">Seeking a:</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="seekingRadio" id="seekingRadio1" value="hero" checked>
+            <label class="form-check-label" for="seekingRadio1">
+                Hero
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="seekingRadio" id="seekingRadio2" value="villian">
+            <label class="form-check-label" for="seekingRadio2">
+                Villian
+            </label>
+        </div>
+        <br> <br>
+
+        <!-- Order vs Freedom -->
+        <label class="form-row" for="order">What is more important: Order or Freedom? (1 = Total Freedom. 10 = Total
+            Order)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order1" value="1">
+            <label class="form-check-label" for="order">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order2" value="2">
+            <label class="form-check-label" for="order">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order3" value="3">
+            <label class="form-check-label" for="order">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order4" value="4">
+            <label class="form-check-label" for="order">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order5" value="5">
+            <label class="form-check-label" for="order">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order6" value="6">
+            <label class="form-check-label" for="order">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order7" value="7">
+            <label class="form-check-label" for="order">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order8" value="8">
+            <label class="form-check-label" for="order">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order9" value="9">
+            <label class="form-check-label" for="order">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="order" id="order10" value="10">
+            <label class="form-check-label" for="order">
+                10
+            </label>
+        </div>
+
+        <!-- Money -->
+        <label class="form-row" for="money">Do you value money? (1 = Not at all. 10 = Above all else.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money1" value="1">
+            <label class="form-check-label" for="money">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money2" value="2">
+            <label class="form-check-label" for="money">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money3" value="3">
+            <label class="form-check-label" for="money">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money4" value="4">
+            <label class="form-check-label" for="money">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money5" value="5">
+            <label class="form-check-label" for="money">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money6" value="6">
+            <label class="form-check-label" for="money">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money7" value="7">
+            <label class="form-check-label" for="money">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money8" value="8">
+            <label class="form-check-label" for="money">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money9" value="9">
+            <label class="form-check-label" for="money">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="money" id="money10" value="10">
+            <label class="form-check-label" for="money">
+                10
+            </label>
+        </div>
+        <!-- Power -->
+        <label class="form-row" for="power">How important is having power to you? (1 = Not at all. 10 = The most.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power1" value="1">
+            <label class="form-check-label" for="power">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power2" value="2">
+            <label class="form-check-label" for="power">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power3" value="3">
+            <label class="form-check-label" for="power">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power4" value="4">
+            <label class="form-check-label" for="power">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power5" value="5">
+            <label class="form-check-label" for="power">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power6" value="6">
+            <label class="form-check-label" for="power">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power7" value="7">
+            <label class="form-check-label" for="power">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power8" value="8">
+            <label class="form-check-label" for="power">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power9" value="9">
+            <label class="form-check-label" for="power">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="power" id="power10" value="10">
+            <label class="form-check-label" for="power">
+                10
+            </label>
+        </div>
+        <!-- Are Humans good or bad? -->
+        <label class="form-row" for="peopleAre">Are humans basically evil or basically good? (1 = Totally evil. 10 = Totally good.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre1" value="1">
+            <label class="form-check-label" for="peopleAre">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre2" value="2">
+            <label class="form-check-label" for="peopleAre">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre3" value="3">
+            <label class="form-check-label" for="peopleAre">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre4" value="4">
+            <label class="form-check-label" for="peopleAre">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre5" value="5">
+            <label class="form-check-label" for="peopleAre">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre6" value="6">
+            <label class="form-check-label" for="peopleAre">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre7" value="7">
+            <label class="form-check-label" for="peopleAre">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre8" value="8">
+            <label class="form-check-label" for="peopleAre">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre9" value="9">
+            <label class="form-check-label" for="peopleAre">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="peopleAre" id="peopleAre10" value="10">
+            <label class="form-check-label" for="peopleAre">
+                10
+            </label>
+        </div>
+        <!-- Capitalism -->
+        <label class="form-row" for="capitalism">How do you feel about Capitalism? (1 = An utter blight on the earth. 10 = The perfect system.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism1" value="1">
+            <label class="form-check-label" for="capitalism">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism2" value="2">
+            <label class="form-check-label" for="capitalism">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism3" value="3">
+            <label class="form-check-label" for="capitalism">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism4" value="4">
+            <label class="form-check-label" for="capitalism">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism5" value="5">
+            <label class="form-check-label" for="capitalism">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism6" value="6">
+            <label class="form-check-label" for="capitalism">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism7" value="7">
+            <label class="form-check-label" for="capitalism">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism8" value="8">
+            <label class="form-check-label" for="capitalism">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism9" value="9">
+            <label class="form-check-label" for="capitalism">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="capitalism" id="capitalism10" value="10">
+            <label class="form-check-label" for="capitalism">
+                10
+            </label>
+        </div>
+        <!-- Communism -->
+        <label class="form-row" for="communism">Do you approve of Communism? (1 = An utter blight on the earth. 10 = The perfect system.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism1" value="1">
+            <label class="form-check-label" for="communism">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism2" value="2">
+            <label class="form-check-label" for="communism">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism3" value="3">
+            <label class="form-check-label" for="communism">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism4" value="4">
+            <label class="form-check-label" for="communism">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism5" value="5">
+            <label class="form-check-label" for="communism">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism6" value="6">
+            <label class="form-check-label" for="communism">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism7" value="7">
+            <label class="form-check-label" for="communism">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism8" value="8">
+            <label class="form-check-label" for="communism">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism9" value="9">
+            <label class="form-check-label" for="communism">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="communism" id="communism10" value="10">
+            <label class="form-check-label" for="communism">
+                10
+            </label>
+        </div>
+        <!-- Protecting the innocent -->
+        <label class="form-row" for="protectInnocent">How important is protecting the innocent to you? (1 = Not at all. 10 = Above all else.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent1" value="1">
+            <label class="form-check-label" for="protectInnocent">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent2" value="2">
+            <label class="form-check-label" for="protectInnocent">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent3" value="3">
+            <label class="form-check-label" for="protectInnocent">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent4" value="4">
+            <label class="form-check-label" for="protectInnocent">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent5" value="5">
+            <label class="form-check-label" for="protectInnocent">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent6" value="6">
+            <label class="form-check-label" for="protectInnocent">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent7" value="7">
+            <label class="form-check-label" for="protectInnocent">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent8" value="8">
+            <label class="form-check-label" for="protectInnocent">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent9" value="9">
+            <label class="form-check-label" for="protectInnocent">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="protectInnocent" id="protectInnocent10" value="10">
+            <label class="form-check-label" for="protectInnocent">
+                10
+            </label>
+        </div>
+        <!-- Collateral Damage -->
+        <label class="form-row" for="collateralDamage">How do you feel about collatoral damage (1 = Don't care/totally unavoidable. 10 = Avoiding it comes ahead of everything else.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage1" value="1">
+            <label class="form-check-label" for="collateralDamage">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage2" value="2">
+            <label class="form-check-label" for="collateralDamage">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage3" value="3">
+            <label class="form-check-label" for="collateralDamage">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage4" value="4">
+            <label class="form-check-label" for="collateralDamage">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage5" value="5">
+            <label class="form-check-label" for="collateralDamage">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage6" value="6">
+            <label class="form-check-label" for="collateralDamage">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage7" value="7">
+            <label class="form-check-label" for="collateralDamage">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage8" value="8">
+            <label class="form-check-label" for="collateralDamage">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage9" value="9">
+            <label class="form-check-label" for="collateralDamage">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="collateralDamage" id="collateralDamage10" value="10">
+            <label class="form-check-label" for="collateralDamage">
+                10
+            </label>
+        </div>
+        <!-- Killing -->
+        <label class="form-row" for="killing">Killing is... (1 = An end unto itself and/or pleasurable. 10 = Unimaginable for any reason.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing1" value="1">
+            <label class="form-check-label" for="killing">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing2" value="2">
+            <label class="form-check-label" for="killing">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing3" value="3">
+            <label class="form-check-label" for="killing">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing4" value="4">
+            <label class="form-check-label" for="killing">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing5" value="5">
+            <label class="form-check-label" for="killing">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing6" value="6">
+            <label class="form-check-label" for="killing">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing7" value="7">
+            <label class="form-check-label" for="killing">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing8" value="8">
+            <label class="form-check-label" for="killing">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing9" value="9">
+            <label class="form-check-label" for="killing">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="killing" id="killing10" value="10">
+            <label class="form-check-label" for="killing">
+                10
+            </label>
+        </div>
+        <!-- Relativism -->
+        <label class="form-row" for="absolutism">Is morality relative? (1 = No. Truth is utterly absolute. 10 = Anything could be morall right under the right circumstances. Nothing is absolutely good or bad.)</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism1" value="1">
+            <label class="form-check-label" for="absolutism">
+                1
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism2" value="2">
+            <label class="form-check-label" for="absolutism">
+                2
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism3" value="3">
+            <label class="form-check-label" for="absolutism">
+                3
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism4" value="4">
+            <label class="form-check-label" for="absolutism">
+                4
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism5" value="5">
+            <label class="form-check-label" for="absolutism">
+                5
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism6" value="6">
+            <label class="form-check-label" for="absolutism">
+                6
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism7" value="7">
+            <label class="form-check-label" for="absolutism">
+                7
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism8" value="8">
+            <label class="form-check-label" for="absolutism">
+                8
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism9" value="9">
+            <label class="form-check-label" for="absolutism">
+                9
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="absolutism" id="absolutism10" value="10">
+            <label class="form-check-label" for="absolutism">
+                10
+            </label>
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
