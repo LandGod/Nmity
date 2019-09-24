@@ -79,7 +79,7 @@ module.exports = function (params) {
                     if (other.userName === me.userName) { continue };
 
                     let loopMatch = 0;
-                    for (let j = 0; j < me.length; j++) {
+                    for (let j = 0; j < me.ansKey.length; j++) {
                         let loopMe = parseInt(me.ansKey[j]);
                         let loopOther = parseInt(other.ansKey[j]);
 
