@@ -1,4 +1,3 @@
--- Drops the database if it already exists --
 DROP DATABASE IF EXISTS nmityDB;
 
 -- Created the DB "nmityDB" (only works on local connections)
@@ -9,11 +8,12 @@ USE nmityDB;
 
 -- Created the table "people"
 CREATE TABLE people (
-  id int AUTO_INCREMENT NOT NULL,
-  userName varchar(30) NOT NULL,
+  id INT AUTO_INCREMENT NOT NULL,
+  userName varchar(255) NOT NULL,
   picture varchar(255) DEFAULT 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png',
   ansKey varchar(10) NOT NULL,
   roll varchar(10) NOT NULL,
+  createdAt TIMESTAMP NOT NULL,
   PRIMARY KEY(id)
 );
 
