@@ -37,20 +37,27 @@ module.exports = function (params) {
     // Required info format {person: {Person}, seeking: "villin" || "hero" }
     app.post('/api/people', function (req, res) {
 
+        console.log(req.body)
+
         // // test data:
         // req.body['person'] = { userName: 'FreddyTest', picture: "https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?resize=256%2C256&quality=100&ssl=1", ansKey: '5555555556', roll: 'villian' }
         // req.body['seeking'] = 'hero';
 
 
         // Update database with entire new row
-        connection.query("INSERT INTO people (userName, picture, ansKey, roll) VALUES (?, ?, ?, ?)", [req.body.person.userName, req.body.person.picture, req.body.person.ansKey, req.body.person.roll], function (err, data) {
+        let profilePic;
+        if (req.body.person.picture === '') {profilePic = null} else {profilePic = req.body.person.picture}
+        connection.query("INSERT INTO people (userName, picture, ansKey, roll) VALUES (?, ?, ?, ?)", [req.body.person.userName, profilePic, req.body.person.ansKey, req.body.person.roll], function (err, data) {
             if (err) { 
                 console.log('Tripped at first db query')
                 console.log(err)
                 return res.status(500).end() };
 
+                console.log(req.body)
+                console.log(req.body.person.seeking)
+
             // After adding to db, find closest match and return it
-            connection.query("SELECT * FROM people WHERE roll = ?", [req.body.seeking], function (err, result) {
+            connection.query("SELECT * FROM people WHERE roll = ?", [req.body.person.seeking], function (err, result) {
                 if (err) { 
                     console.log('Tripped at 2nd db query')
                     return res.status(500).end() }
@@ -58,7 +65,12 @@ module.exports = function (params) {
                 let parsedResult = result;
                 let me = req.body.person;
 
-                let bestMatch = { id: undefined, difference: 9999 }
+                console.log('ParsedResult:')
+                console.log(parsedResult)
+                console.log('Me:')
+                console.log(me)
+
+                let bestMatch = { id: 1, difference: 9999 }
 
                 for (let i = 0; i < parsedResult.length; i++) {
                     let other = parsedResult[i];
@@ -82,7 +94,7 @@ module.exports = function (params) {
                     }
 
                 }
-
+                console.log(parsedResult[bestMatch.id])
                 return res.json(parsedResult[bestMatch.id]);
 
             });

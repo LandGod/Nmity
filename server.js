@@ -33,7 +33,7 @@ connection.connect(function(err) {
 });
 
 // Routes
-// require('./app/routing/htmlRoutes.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 require("./app/routing/apiRoutes.js")([app,connection]);
 
 // Start our server so that it can begin listening to client requests.
